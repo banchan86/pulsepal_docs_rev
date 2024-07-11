@@ -1,0 +1,52 @@
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+{{!master(layout/_master.tmpl)}}
+
+{{^_splitReference}}
+{{#isClass}}
+
+<h1 id="{{id}}" data-uid="{{uid}}" class="text-break">
+  {{#inClass}}{{name.0.value}}{{/inClass}}
+  {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
+</h1>
+
+
+<div class="markdown summary">{{{summary}}}</div>
+<div class="markdown level0 remarks">{{#remarks}}{{{remarks}}}{{/remarks}}</div>
+
+
+<div class="markdown conceptual">{{{conceptual}}}</div>
+
+{{#children}}
+
+{{#inProperty}}
+
+<h2>Properties</h2>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th> 
+    <th>Description</th>
+  </tr>
+  {{>partials/class.properties}}
+</table>
+
+{{/inProperty}}
+
+{{#inMethod}}
+
+<h2>Inputs/Outputs</h2>
+<table>
+  <tr>
+    <th>Input/Output</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  {{>partials/class.methods}}
+</table>
+
+{{/inMethod}}
+
+{{/children}}
+
+{{/isClass}}
+{{/_splitReference}}

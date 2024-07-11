@@ -1,0 +1,25 @@
+{{#children}}
+{{#syntax}}
+
+{{#syntax.parameters}}
+
+<tr>
+  <td>Input</td>
+  <td>{{{type.specName.0.value}}}</td>
+  <td>{{{description}}}</td>
+</tr>
+
+{{/syntax.parameters}}
+
+{{#syntax.return}}
+
+<tr>
+  <td>Output</td>
+  <td>{{{type.specName.0.value}}}</td>
+  <td>{{{description}}}</td>
+</tr>
+
+{{/syntax.return}}
+
+{{/syntax}}
+{{/children}}
