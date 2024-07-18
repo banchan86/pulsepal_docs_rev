@@ -1,0 +1,8 @@
+{{#children}}
+
+<tr>
+  <td id="{{id}}" data-uid="{{uid}}"><code>{{syntax.content.0.value}}</code></td>
+  <td>{{{summary}}}</td>
+</tr>
+
+{{/children}}

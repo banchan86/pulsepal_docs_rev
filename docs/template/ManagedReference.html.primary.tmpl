@@ -49,4 +49,37 @@
 {{/children}}
 
 {{/isClass}}
+
+{{#isEnum}}
+
+<h1 id="{{id}}" data-uid="{{uid}}" class="text-break">
+  {{#inEnum}}{{name.0.value}}{{/inEnum}}
+  {{#sourceurl}}<a class="header-action link-secondary" title="View source" href="{{sourceurl}}"><i class="bi bi-code-slash"></i></a>{{/sourceurl}}
+</h1>
+
+
+<div class="markdown summary">{{{summary}}}</div>
+<div class="markdown level0 remarks">{{#remarks}}{{{remarks}}}{{/remarks}}</div>
+<div class="markdown conceptual">{{{conceptual}}}</div>
+
+{{#children}}
+
+
+{{#inField}}
+<h2>Fields</h2>
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Description</th>
+  </tr>
+  {{>partials/enum.fields}}
+</table>
+
+{{/inField}}
+
+
+{{/children}}
+
+
+{{/isEnum}}
 {{/_splitReference}}
