@@ -19,11 +19,6 @@ exports.transform = function (model) {
   if (common && common.transform) {
     model = common.transform(model);
   }
-
-
-  // Convert numbers to strings in the model
-  convertNumbersToStrings(model);
-
   if (model.type.toLowerCase() === "enum") {
     model.isClass = false;
     model.isEnum = true;
@@ -72,23 +67,3 @@ function postTransformMemberPage(model) {
   }
   return model;
 }
-
-// Helper function to convert numbers to strings
-function convertNumbersToStrings(obj) {
-  if (typeof obj === 'number') {
-    return obj.toString();
-  } else if (Array.isArray(obj)) {
-    for (var i = 0; i < obj.length; i++) {
-      obj[i] = convertNumbersToStrings(obj[i]);
-    }
-  } else if (typeof obj === 'object' && obj !== null) {
-    for (var key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        obj[key] = convertNumbersToStrings(obj[key]);
-      }
-    }
-  }
-  return obj;
-}
-
-// debug function to verify 
