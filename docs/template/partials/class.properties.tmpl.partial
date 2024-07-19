@@ -3,6 +3,7 @@
 <tr>
   <td id="{{id}}" data-uid="{{uid}}"><code>{{name.0.value}}</code></td>
   <td>{{#syntax}}{{#propertyValue}}{{{type.specName.0.value}}}{{/propertyValue}}{{/syntax}}</td>
+  <td>{{#syntax}}{{#attributes}}{{#arguments.0}}{{value}}{{/arguments.0}}{{/attributes}}{{/syntax}}</td>
   <td>{{{summary}}}</td>
 </tr>
 
