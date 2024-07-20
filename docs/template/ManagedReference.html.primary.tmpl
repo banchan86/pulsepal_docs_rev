@@ -34,7 +34,7 @@
 
 {{#inMethod}}
 
-<h2>Inputs/Outputs</h2>
+<h2>Methods</h2>
 <table>
   <tr>
     <th>Input/Output</th>
@@ -49,68 +49,7 @@
 {{/children}}
 
 <h2>Class Relationships</h2>
-{{#inClass}}
-{{#inheritance.0}}
-<dl class="typelist inheritance">
-  <dt>{{__global.inheritance}}</dt>
-  <dd>
-{{/inheritance.0}}
-{{#inheritance}}
-    <div>{{{specName.0.value}}}</div>
-{{/inheritance}}
-    <div><span class="xref">{{name.0.value}}</span></div>
-{{#inheritance.0}}
-  </dd>
-</dl>
-{{/inheritance.0}}
-{{/inClass}}
-
-{{#implements.0}}
-<dl class="typelist implements">
-  <dt>{{__global.implements}}</dt>
-  <dd>
-{{/implements.0}}
-{{#implements}}
-    <div>{{{specName.0.value}}}</div>
-{{/implements}}
-{{#implements.0}}
-  </dd>
-</dl>
-{{/implements.0}}
-
-{{#inClass}}
-{{#derivedClasses.0}}
-<dl class="typelist derived">
-  <dt>{{__global.derived}}</dt>
-  <dd>
-{{/derivedClasses.0}}
-{{#derivedClasses}}
-    <div>{{{specName.0.value}}}</div>
-{{/derivedClasses}}
-{{#derivedClasses.0}}
-  </dd>
-</dl>
-{{/derivedClasses.0}}
-{{/inClass}}
-
-{{#inheritedMembers.0}}
-<dl class="typelist inheritedMembers">
-  <dt>{{__global.inheritedMembers}}</dt>
-  <dd>
-{{/inheritedMembers.0}}
-{{#inheritedMembers}}
-  <div>
-  {{#definition}}
-    <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-  {{/definition}}
-  </div>
-{{/inheritedMembers}}
-{{#inheritedMembers.0}}
-</dl>
-{{/inheritedMembers.0}}
+{{>partials/class.relationships}}
 
 {{/isClass}}
 
