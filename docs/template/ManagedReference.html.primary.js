@@ -23,6 +23,32 @@ exports.transform = function (model) {
     model.isClass = false;
     model.isEnum = true;
   }
+
+  // checks for Bonsai operator types and sets a flag in ViewModel
+  // Combinator comes first because Sinks are sometimes built on Sink
+  //Transform and Condition needs to be tested
+  if (model.syntax.content && model.syntax.content[0].value.includes("Combinator")) {
+    model.BonsaiOperatorType = "Combinator";
+  }
+
+  if (model.syntax.content && model.syntax.content[0].value.includes("Sink")) {
+    model.BonsaiOperatorType = "Sink";
+  } 
+
+  if (model.syntax.content && model.syntax.content[0].value.includes("Source")) {
+    model.BonsaiOperatorType = "Source";
+  }
+
+  if (model.syntax.content && model.syntax.content[0].value.includes("Transform")) {
+    model.BonsaiOperatorType = "Transform";
+  }
+
+  if (model.syntax.content && model.syntax.content[0].value.includes("Condition")) {
+    model.BonsaiOperatorType = "Condition";
+  }
+  
+  
+
   if(model._disableToc === undefined) {
     model._disableToc = model._disableToc || !model._tocPath || (model._navPath === model._tocPath);
   }
