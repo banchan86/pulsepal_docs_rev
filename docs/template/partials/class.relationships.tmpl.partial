@@ -60,16 +60,3 @@
 {{#inheritedMembers.0}}
 </dl>
 {{/inheritedMembers.0}}
-
-<h2>Direct Parent</h2>
-{{#inClass}}
-  {{#inheritance.0}}
-  <dl class="typelist inheritance">
-    <dt>{{__global.inheritance}}</dt>
-    <dd>
-      <div>{{{inheritance.0.specName.0.value}}}</div>
-      <div><span class="xref">{{inheritance.0.name.0.value}}</span></div>
-    </dd>
-  </dl>
-  {{/inheritance.0}}
-{{/inClass}}
