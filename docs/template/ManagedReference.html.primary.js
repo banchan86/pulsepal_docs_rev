@@ -25,8 +25,8 @@ exports.transform = function (model) {
   }
 
   // checks for Bonsai operator types and sets a flag in ViewModel
-  // Combinator comes first because Sinks are sometimes built on Sink
-  //Transform and Condition needs to be tested
+  // Combinator comes first because Sinks are sometimes built on Combinators
+  // Transform and Condition needs to be tested
   if (model.syntax.content && model.syntax.content[0].value.includes("Combinator")) {
     model.BonsaiOperatorType = "Combinator";
   }

@@ -1,9 +1,19 @@
 {{#children}}
 
 <tr>
-  <td>{{{specName.0.value}}}{{{summary}}}</td>
-  <td>{{{syntax.parameters.0.type.specName.0.value}}}{{{syntax.parameters.0.description}}}</td>
-  <td>{{{syntax.return.type.specName.0.value}}}{{{syntax.return.description}}}</td>
+  <td>
+  {{{specName.0.value}}}{{{summary}}}
+  </td>
+  <td>
+  {{#syntax.parameters}}
+  {{{type.specName.0.value}}}{{{description}}}
+  {{/syntax.parameters}}
+  </td>
+  <td>
+  {{#syntax.return}}
+  {{{type.specName.0.value}}}{{{description}}}
+  {{/syntax.return}}
+  </td>
 </tr>
 
 {{/children}}
