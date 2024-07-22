@@ -7,6 +7,13 @@
   <td>
   {{#syntax.parameters}}
   {{{type.specName.0.value}}}{{{description}}}
+  {{#remarks}}
+  Remarks - {{.}}
+  {{/remarks}}
+  {{#exceptions}}
+  {{{type.specName.0.value}}}
+  {{{description}}}
+  {{/exceptions}}
   {{/syntax.parameters}}
   </td>
   <td>
@@ -17,5 +24,3 @@
 </tr>
 
 {{/children}}
-
-
