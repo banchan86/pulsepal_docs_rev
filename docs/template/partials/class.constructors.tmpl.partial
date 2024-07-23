@@ -1,0 +1,14 @@
+{{#children}}
+
+<tr>
+  <td>
+  {{{specName.0.value}}}{{{summary}}}
+  </td>
+  <td>
+  {{#syntax.parameters}}
+  {{{type.specName.0.value}}}{{{description}}}
+  {{/syntax.parameters}}
+  </td>
+</tr>
+
+{{/children}}
