@@ -42,31 +42,6 @@ exports.preTransform = function (model) {
       model.combinatorNode = true;
     }
   }
-  // Shawns check does not work for bonsai.onix repo 
-  // temp placeholder
-  // checks for Bonsai operator types and sets a flag in ViewModel
-  // Combinator comes first because Sinks and Transforms are sometimes built on Combinators
-  // Transform and Condition needs to be tested
-  if (model.syntax.content && model.syntax.content[0].value.includes("Combinator")) {
-    model.BonsaiOperatorType = "Combinator";
-  }
-
-  if (model.syntax.content && model.syntax.content[0].value.includes("Sink")) {
-    model.BonsaiOperatorType = "Sink";
-  }
-
-  if (model.syntax.content && model.syntax.content[0].value.includes("Source")) {
-    model.BonsaiOperatorType = "Source";
-  }
-
-  if (model.syntax.content && model.syntax.content[0].value.includes("Transform")) {
-    model.BonsaiOperatorType = "Transform";
-  }
-
-  if (model.syntax.content && model.syntax.content[0].value.includes("Condition")) {
-    model.BonsaiOperatorType = "Condition";
-  }
- 
   return model;
 }
 
