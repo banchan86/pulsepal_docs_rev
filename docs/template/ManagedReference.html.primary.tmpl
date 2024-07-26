@@ -43,15 +43,13 @@
   </div>
 
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="Developers">
-  <br>
   {{>partials/class.relationships}}
   {{#children}}
   {{#inConstructor}}
 
-  <h2>Constructors</h2>
   <table>
     <tr>
-      <th>Description</th>
+      <th>Constructors</th>
       <th>Parameters</th>
       {{>partials/class.constructors}}
     </tr>
@@ -64,10 +62,9 @@
   {{#children}}
   {{#inMethod}}
 
-  <h2>Methods</h2>
   <table>
     <tr>
-      <th>Description</th>
+      <th>Methods</th>
       <th>Parameters</th>
       <th>Returns & Exceptions</th>
       {{>partials/class.methods}}
@@ -78,11 +75,6 @@
   {{/children}}
   </div>
 </div>
-
-
-
-
-
 
 {{/isClass}}
 
