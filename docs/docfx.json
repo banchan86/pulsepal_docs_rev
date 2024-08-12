@@ -32,7 +32,8 @@
           "logo.svg",
           "favicon.ico",
           "images/**",
-          "workflows/**"
+          "workflows/**",
+          "bonsai/template/api/images/**"
         ]
       }
     ],
