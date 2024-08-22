@@ -33,7 +33,8 @@
           "favicon.ico",
           "images/**",
           "workflows/**",
-          "bonsai/template/api/images/**"
+          "bonsai/template/api/images/**",
+          "bonsai/template/api/styles/**"
         ]
       }
     ],
